@@ -15,7 +15,7 @@ namespace ScraperApplication.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Process of the whole Scraper Application";
 
             return View();
         }
