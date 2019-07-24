@@ -1,0 +1,90 @@
+﻿@model ScraperApplication.Models.StockTable
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>StockTable</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StockRecord)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StockRecord)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Symbol)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastPrice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastPrice)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Change)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Change)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PChg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PChg)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Currency)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Currency)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MarketTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MarketTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VolumeAvg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VolumeAvg)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
