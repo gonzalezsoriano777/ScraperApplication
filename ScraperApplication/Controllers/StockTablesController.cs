@@ -129,9 +129,9 @@ namespace ScraperApplication.Controllers
         public ActionResult Scrape()
         {
             Scraping buttonExecution = new Scraping();
-            buttonExecution.LogginIn();
-            buttonExecution.TransitionToPortfolio();
-            buttonExecution.InsertingData();
+            buttonExecution.DataInsertion();
+           // buttonExecution.TransitionToPortfolio();
+           // buttonExecution.InsertingData();
 
 
             return RedirectToAction("Index");
