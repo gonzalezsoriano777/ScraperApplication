@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ScraperApplication.Models.ParsingTable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StockRecord)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastSale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Change)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PChg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VolumeAvg)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockRecord)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastSale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Change)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PChg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VolumeAvg)
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

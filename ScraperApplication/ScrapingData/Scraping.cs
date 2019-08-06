@@ -15,13 +15,6 @@ namespace ScraperApplication.ScrapingData
 {
     public class Scraping
     {
-        //string[] stockFields =
-          //  { "@stock_ID" , "@symbol", "@lastPrice", "@change", "@pchg", "@currency", "@marketTime", "@volumeAvg" };
-
-        
-        //used for dummy data
-         
-
         string connectionString =
             @"Data Source=(localdb)\ProjectsV13;Initial Catalog=stockDatabase;Integrated Security=True;Connect Timeout=30;
             Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -35,10 +28,8 @@ namespace ScraperApplication.ScrapingData
 
             using (IWebDriver driver = new ChromeDriver(options))
             {
-                //Navigating yahoo finance
                 driver.Navigate().GoToUrl("http://yahoo.com/");
 
-                // duration time to sign in
                 WebDriverWait LogIn = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
                 LogIn.Until(ExpectedConditions.ElementToBeClickable(By.Id("uh-signin")));
                 IWebElement signIn = driver.FindElement(By.Id("uh-signin"));

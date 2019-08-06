@@ -184,12 +184,28 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ParsingTablesController.cs" />
     <Compile Include="Controllers\stockDataController.cs" />
     <Compile Include="Controllers\StockTablesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DBParsing.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBParsing.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBParsing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBParsing.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBParsing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBParsing.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModelDB.Context.cs">
@@ -206,6 +222,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ParsingTable.cs">
+      <DependentUpon>DBParsing.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SingleModelDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -242,6 +261,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\DBParsing.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBParsing.edmx</DependentUpon>
+      <LastGenOutput>DBParsing.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DBParsing.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBParsing.edmx</DependentUpon>
+      <LastGenOutput>DBParsing.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\ModelDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelDB.edmx</DependentUpon>
@@ -298,6 +327,13 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\DBParsing.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBParsing.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DBParsing.edmx.diagram">
+      <DependentUpon>DBParsing.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -309,10 +345,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\popper-utils.js" />
-    <Content Include="Scripts\popper-utils.min.js" />
-    <Content Include="Scripts\popper.js" />
-    <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
@@ -362,11 +394,8 @@
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
     <Content Include="Scripts\umd\popper-utils.js.map" />
-    <Content Include="Scripts\README.md" />
-    <Content Include="Scripts\popper.min.js.map" />
-    <Content Include="Scripts\popper.js.map" />
-    <Content Include="Scripts\popper-utils.min.js.map" />
-    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\ParsingTables\Create.cshtml" />
+    <Content Include="Views\ParsingTables\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
