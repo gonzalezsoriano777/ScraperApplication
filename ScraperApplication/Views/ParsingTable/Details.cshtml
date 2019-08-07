@@ -1,0 +1,82 @@
+﻿@model ScraperApplication.Models.ParsingTable
+
+@{
+    ViewBag.Title = "index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ParsingTable</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StockRecord)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StockRecord)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Symbol)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Company)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Company)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastSale)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastSale)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Change)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Change)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PChg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PChg)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VolumeAvg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VolumeAvg)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

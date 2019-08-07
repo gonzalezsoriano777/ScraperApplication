@@ -15,7 +15,7 @@ namespace ScraperApplication.Models
     public partial class ParsingTable
     {
         public int Id { get; set; }
-        public string StockRecord { get; set; }
+        public Nullable<System.DateTime> StockRecord { get; set; }
         public string Symbol { get; set; }
         public string Company { get; set; }
         public string LastSale { get; set; }

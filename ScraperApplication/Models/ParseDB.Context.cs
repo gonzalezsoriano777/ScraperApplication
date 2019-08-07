@@ -13,10 +13,10 @@ namespace ScraperApplication.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ParsingOfDataEntities : DbContext
+    public partial class ParsingDataEntity : DbContext
     {
-        public ParsingOfDataEntities()
-            : base("name=ParsingOfDataEntities")
+        public ParsingDataEntity()
+            : base("name=ParsingDataEntity")
         {
         }
     

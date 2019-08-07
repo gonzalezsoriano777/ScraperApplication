@@ -1,0 +1,88 @@
+﻿@model ScraperApplication.Models.ParsingTable
+
+@{
+    ViewBag.Title = "index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>ParsingTable</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StockRecord)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StockRecord)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Symbol)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Company)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Company)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastSale)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastSale)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Change)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Change)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PChg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PChg)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VolumeAvg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VolumeAvg)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

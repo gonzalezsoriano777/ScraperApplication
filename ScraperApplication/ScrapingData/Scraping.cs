@@ -45,15 +45,19 @@ namespace ScraperApplication.ScrapingData
                 IWebElement password = driver.FindElement(By.Id("login-passwd"));
                 password.SendKeys("Hector3463");
                 password.SendKeys(Keys.Enter);
-
+                
                 driver.Navigate().GoToUrl("https://finance.yahoo.com/portfolio/p_0/view");
 
+                WebDriverWait tbodyDuration = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
+
+                tbodyDuration.Until(d => driver.FindElement(By.TagName("tbody")));
+
                 int counter;
-                var tableBody = driver.FindElement(By.XPath("//*[@id=\"pf-detail-table\"]/div[1]/table/tbody"));
+                IWebElement tableBody = driver.FindElement(By.TagName("tbody"));
                 System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> stockList = tableBody.FindElements(By.TagName("tr"));
                 counter = stockList.Count;
 
-                List<StockTable> ListOfStocks = new List<StockTable>();
+                List <StockTable> ListOfStocks = new List<StockTable>();
 
                 for (int stocks = 1; stocks <= counter; stocks++)
                 {

@@ -8,20 +8,22 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ScraperApplication.Models;
+using ScraperApplication.ScrapingData;
+
 
 namespace ScraperApplication.Controllers
 {
-    public class ParsingTablesController : Controller
+    public class ParsingTableController : Controller
     {
-        private ParsingOfDataEntities db = new ParsingOfDataEntities();
+        private ParsingDataEntity db = new ParsingDataEntity();
 
-        // GET: ParsingTables
+        // GET: ParsingTable
         public async Task<ActionResult> Index()
         {
             return View(await db.ParsingTables.ToListAsync());
         }
 
-        // GET: ParsingTables/Details/5
+        // GET: ParsingTable/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,13 +38,13 @@ namespace ScraperApplication.Controllers
             return View(parsingTable);
         }
 
-        // GET: ParsingTables/Create
+        // GET: ParsingTable/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ParsingTables/Create
+        // POST: ParsingTable/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,7 +61,7 @@ namespace ScraperApplication.Controllers
             return View(parsingTable);
         }
 
-        // GET: ParsingTables/Edit/5
+        // GET: ParsingTable/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,7 +76,7 @@ namespace ScraperApplication.Controllers
             return View(parsingTable);
         }
 
-        // POST: ParsingTables/Edit/5
+        // POST: ParsingTable/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,7 +92,7 @@ namespace ScraperApplication.Controllers
             return View(parsingTable);
         }
 
-        // GET: ParsingTables/Delete/5
+        // GET: ParsingTable/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -105,7 +107,7 @@ namespace ScraperApplication.Controllers
             return View(parsingTable);
         }
 
-        // POST: ParsingTables/Delete/5
+        // POST: ParsingTable/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
@@ -124,5 +126,14 @@ namespace ScraperApplication.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Parse()
+        {
+            AgilityParser parsingData = new AgilityParser();
+            parsingData.Parsing();
+
+            return RedirectToAction("index");
+        }
+
     }
 }
