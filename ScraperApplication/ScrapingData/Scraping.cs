@@ -33,7 +33,6 @@ namespace ScraperApplication.ScrapingData
                 WebDriverWait LogIn = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
                 LogIn.Until(ExpectedConditions.ElementToBeClickable(By.Id("uh-signin")));
                 IWebElement signIn = driver.FindElement(By.Id("uh-signin"));
-
                 signIn.Click();
 
                 IWebElement username = driver.FindElement(By.Id("login-username"));
