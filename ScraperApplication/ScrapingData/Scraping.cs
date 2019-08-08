@@ -21,7 +21,6 @@ namespace ScraperApplication.ScrapingData
 
         public void DataInsertion()
         {
-
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--headless");
             options.AddArgument("--disable-gpu");
