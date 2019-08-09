@@ -10,8 +10,11 @@ using ScraperApplication.Models;
 using ScraperApplication.ScrapingData;
 
 
+
 namespace ScraperApplication.Controllers
 {
+
+    
     public class StockTablesController : Controller
     {
         private stockDatabaseEntities db = new stockDatabaseEntities();

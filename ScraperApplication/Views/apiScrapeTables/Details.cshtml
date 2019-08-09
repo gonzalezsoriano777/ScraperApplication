@@ -1,0 +1,66 @@
+﻿@model ScraperApplication.Models.apiScrapeTable
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>apiScrapeTable</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StockRecord)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StockRecord)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Symbol)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastPrice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastPrice)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PercentChange)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PercentChange)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MarketChange)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MarketChange)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

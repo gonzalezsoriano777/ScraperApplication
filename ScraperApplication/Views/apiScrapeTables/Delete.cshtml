@@ -1,0 +1,72 @@
+﻿@model ScraperApplication.Models.apiScrapeTable
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>apiScrapeTable</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StockRecord)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StockRecord)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Symbol)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastPrice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastPrice)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PercentChange)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PercentChange)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MarketChange)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MarketChange)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
