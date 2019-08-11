@@ -128,7 +128,6 @@ namespace ScraperApplication.Controllers
         public ActionResult Request()
         {
 
-
             return RedirectToAction("Index");
 
         }
