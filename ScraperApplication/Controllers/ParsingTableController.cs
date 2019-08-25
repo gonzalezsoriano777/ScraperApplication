@@ -13,6 +13,7 @@ using ScraperApplication.ScrapingData;
 
 namespace ScraperApplication.Controllers
 {
+    [Authorize]
     public class ParsingTableController : Controller
     {
         private ParsingDataEntity db = new ParsingDataEntity();

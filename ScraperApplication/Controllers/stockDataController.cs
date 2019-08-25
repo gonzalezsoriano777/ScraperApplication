@@ -11,6 +11,7 @@ using ScraperApplication.Models;
 
 namespace ScraperApplication.Controllers
 {
+    [Authorize]
     public class stockDataController : Controller
     {
         private stockEntity db = new stockEntity();

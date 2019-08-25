@@ -11,6 +11,7 @@ using ScraperApplication.Models;
 
 namespace ScraperApplication.Controllers
 {
+    [Authorize]
     public class apiScrapeTablesController : Controller
     {
         private apiDatabaseEntities db = new apiDatabaseEntities();
