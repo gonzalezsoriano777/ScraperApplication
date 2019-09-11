@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ScraperApplication.Models;
+using ScraperApplication.ScrapingData;
 
 namespace ScraperApplication.Controllers
 {
@@ -128,7 +129,8 @@ namespace ScraperApplication.Controllers
 
         public ActionResult Request()
         {
-
+            ApiScraper apiScrape = new ApiScraper();
+            apiScrape.ScrapeFromContent();
 
             return RedirectToAction("Index");
 
